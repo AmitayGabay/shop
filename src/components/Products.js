@@ -4,6 +4,7 @@ import Loader from "./Loader";
 import "./Products.css";
 
 const Products = ({ products, productsInCart }) => {
+  console.log("rendering");
   const productComponnents = products.map((product) => (
     <Product
       key={product.id}
