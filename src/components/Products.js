@@ -4,21 +4,16 @@ import Loader from "./Loader";
 import "./Products.css";
 
 const Products = ({ products, productsInCart }) => {
-  console.log("rendering");
-  const productComponnents = products.map((product) => (
-    <Product
-      key={product.id}
-      productInfo={product}
-      productsInCart={productsInCart}
-    />
-  ));
-
   // console.log(productsArr);
 
   return (
     <>
-      {productComponnents.length === 0 && <Loader />}
-      <section className="products">{productComponnents}</section>
+      {/* {productComponnents.length === 0 && <Loader />} */}
+      <section className="products">
+        {products.map(item => {
+          return(<Product key={item.id} productInfo={item} productsInCart={productsInCart}/>);
+        })}
+      </section>
     </>
   );
 };

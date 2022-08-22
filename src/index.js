@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Routing from "./components/Routing";
+import Routing from "./myComponents/Routing";
+import ShopContext from "./ShopContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <ShopContext.Provider>
     <Routing />
-  </React.StrictMode>
+  </ShopContext.Provider>
 );
