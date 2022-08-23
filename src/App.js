@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Cart from "./components/Cart";
+// import Cart from "./components/Cart";
 import Nav from "./components/Nav";
-import Products from "./components/Products";
-import ShopContext from "./ShopContext";
-
+import ShopContext from "./contexts/ShopContext";
+// import Products from "./components/Products";
+// import ShopContext from "./ShopContext";
+import Routing from "./myComponents/Routing"
 function App() {
   // const [productsArr, setProductsArr] = useState([]);
   // const [productsInCart, setProductsInCart] = useState([]);
@@ -67,7 +68,9 @@ function App() {
   //   filteredProductsByCategory.length === 0
   //     ? productsArr
   //     : filteredProductsByCategory;
-
+  const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+  
   return (
     // <ShopContext.Provider value={{ addToCart, removeFromCart }}>
     //   <div className="main-container">
@@ -76,6 +79,10 @@ function App() {
     //     <Products products={productsToRender} productsInCart={productsInCart} />
     //   </div>
     // </ShopContext.Provider>
+    <ShopContext.Provider value={{ products, setProducts,setAllProducts,allProducts }}>
+      <Routing />
+    </ShopContext.Provider>
+
   );
 }
 

@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import App from "../App";
-import Cart from "./Cart";
+import Home from "./Home";
+import Nav from "./Nav";
+
 
 const Routing = () => {
   return (
     <Router>
-      {/* <Link to="/">home</Link>
-      <Link to={"/cart"}>Cart</Link> */}
+      <Nav/>
       <Routes>
-        {/* <Route index element={<App />} /> */}
-        {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route index element={<Home/>}/>
+        <Route path="/*" element={<h1>404 not found</h1>}/>
+        <Route/>
       </Routes>
     </Router>
   );
