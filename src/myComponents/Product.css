@@ -1,55 +1,80 @@
 .product-card {
+    width: 19%;
+    padding: 8px;
     display: flex;
     flex-direction: column;
-    
-    padding: 2%;
-    flex: 1 16%;
-    /* max-width: 16%; */
-
-    background-color: #fff;
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    margin: 12px 4px;
+    border: solid rgb(45, 45, 158) 1px;
+    border-radius: 8px;
+    text-align: center;
+    background: rgb(117, 194, 243);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
-.product-image img {
-    width: 100%;
+.product-image {
+    min-height: 200px;
+    position: relative;
+}
+
+.product-cat {
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    border-radius: 2px;
+    padding: 2px;
 }
 
 .product-info {
-    margin-top: auto;
-    padding-top: 20px;
-    text-align: center;
+    flex: 2;
+    font-size: 13px;
+    margin: 0;
+}
+
+.product-price {
+    flex: 1;
+    color: rgb(45, 45, 158);
+    font-size: 20px;
+    margin: 0;
 }
 
 .cart-btns-container {
+    flex: 1;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
 }
 
-.cart-btns-container > button {
-    background-color: rgb(136, 213, 221);
-    height: 35px;
-    width: 30%
+.cart-btns-container>div {
+    flex: 1;
 }
 
-.cart-btns-container > button:hover {
-    background-color: rgb(97, 181, 189);
+.cart-btns-container .amount {
+    font-weight: bold;
+    color: #0a0101;
+    text-shadow: 2px 1px 0 #ffffff;
 }
 
-@media (max-width: 920px) {
-    .product-card {
-    flex: 1 21%;
-    }
-
-    .products .product-card:first-child,
-    .products .product-card:nth-child(2) {
-    flex: 2 46%;
-    }
+.more-info {
+    margin-top: 8px;
+    padding: 4px;
+    background: rgb(215, 123, 160);
+    border-radius: 4px;
 }
 
-@media (max-width: 600px) {
-    .product-card {
-    flex: 1 46%;
-    }
+.more-info:hover {
+    cursor: pointer;
+    background: rgb(208, 79, 122);
+}
+
+.open-cart {
+    margin-top: 8px;
+    padding: 4px;
+    background: rgb(160, 90, 173);
+    border-radius: 4px;
+}
+
+.open-cart:hover {
+    cursor: pointer;
+    background: rgb(156, 70, 171);
 }

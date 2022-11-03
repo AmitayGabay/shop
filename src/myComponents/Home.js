@@ -1,33 +1,30 @@
-import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import { ReactDOM } from 'react';
 import Product from './Product';
-import "./Products.css";
-import "../App.css";
+import "./Home.css";
 import Loader from './Loader';
+import "./Loader.css";
 import ShopContext from '../contexts/ShopContext';
+import Nav from './Nav';
+
 const Home = () => {
-  const {products,setProducts,setAllProducts} = useContext(ShopContext)
-  const [isLoading, setIsLoading] = useState(true)
+  const { products, setIsHome, isLoading} = useContext(ShopContext);
   useEffect(() => {
-    getProducts()
+    setIsHome(true);
   }, [])
-  const getProducts = async () => {
-    let { data } = await axios.get("https://fakestoreapi.com/products")
-    setProducts(data);
-    setAllProducts(data);
-    setIsLoading(false)
-  }
+  
   return (
-    <div className="main-container">
-      {isLoading && <Loader />}
-      {!isLoading&&products.length===0&&<h1>אין מוצרים</h1>}
-      <section className="products">
-        {
-          products.map(item => <Product item={item} />)
-        }
-      </section>
-    </div>
+    <>
+      <Nav />
+        {isLoading && <Loader />}
+        {!isLoading && products.length === 0 && <h1 className='no_products'><span>אין מוצרים</span></h1>}
+      <div className="main-container">
+        <section className="products">
+          {
+            products.map((item) => <Product item={item} />)
+          }
+        </section>
+      </div>
+    </>
   )
 }
 

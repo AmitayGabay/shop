@@ -1,0 +1,89 @@
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 24px 0;
+}
+
+h1 .info_of_item {
+    text-shadow: 2px 2px 2px #CE5937;
+    box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    padding: 8px;
+}
+
+.id_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-card {
+    text-align: center;
+    width: 50%;
+    padding: 8px;
+    margin: 12px 4px;
+    border: solid rgb(45, 45, 158) 1px;
+    border-radius: 8px;
+    min-height: 400px;
+    text-align: center;
+    background: rgb(160, 248, 204);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.item-image {
+    min-height: 250px;
+}
+
+.item-cat {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.id_container h3{
+    color: rgb(18, 123, 9);
+    margin: 0;
+}
+
+.item-info h3{
+    font-size: 24px;
+    margin: 0;
+    color: rgb(217, 137, 39);
+}
+
+.item-info h3{
+    margin: 12px;
+}
+
+.item-price {
+    color: rgb(45, 45, 158);
+    font-size: 24px;
+    padding: 8px;
+}
+
+.item-price h4{
+    margin: 0;
+}
+
+.item-description{
+    font-size: 12px;
+    margin: 0;
+    padding: 4px;
+}
+
+.item-description h4{
+    margin: 0;
+}
+
+.item-rating{
+    font-size: 16px;
+    margin: 0;
+    padding: 4px;
+}
+
+.item-rating h4{
+    margin: 0;
+}
